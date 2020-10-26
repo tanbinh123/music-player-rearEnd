@@ -16,7 +16,6 @@ public class AdminController {
     @Autowired
     private AdminService adminService;
 
-    // 判断是否登录成功
     @RequestMapping(value = "/admin/login/status", method = RequestMethod.POST)
     public Object loginStatus(HttpServletRequest request, HttpSession session) {
         JSONObject jsonObject = new JSONObject();
