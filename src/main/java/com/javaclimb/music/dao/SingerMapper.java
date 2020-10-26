@@ -19,4 +19,6 @@ public interface SingerMapper {
     public List<Singer> allSinger(); // 查询所有歌手
 
     public List<Singer> singerOfName(String name); // 根据歌手名字模糊查询列表
+
+    public List<Singer> singerOfSex(Integer sex); // 根据性别查询
 }
