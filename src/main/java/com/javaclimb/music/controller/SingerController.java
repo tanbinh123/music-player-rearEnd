@@ -72,7 +72,6 @@ public class SingerController {
         String id = request.getParameter("id").trim(); // 主键
         String name = request.getParameter("name").trim(); // 姓名
         String sex = request.getParameter("sex").trim(); // 性别
-        String pic = request.getParameter("pic").trim(); // 头像
         String birth = request.getParameter("birth").trim(); // 生日
         String location = request.getParameter("location").trim(); // 地区
         String introduction = request.getParameter("introduction").trim(); // 简介
@@ -91,7 +90,6 @@ public class SingerController {
         singer.setId(Integer.parseInt(id));
         singer.setName(name);
         singer.setSex(new Byte(sex));
-        singer.setPic(pic);
         singer.setBirth(birthDate);
         singer.setLocation(location);
         singer.setIntroduction(introduction);
