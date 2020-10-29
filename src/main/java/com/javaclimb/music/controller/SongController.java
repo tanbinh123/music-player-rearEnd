@@ -210,4 +210,16 @@ public class SongController {
             return jsonObject;
         }
     }
+
+    @RequestMapping(value = "/detail", method = RequestMethod.GET)
+    public Object detail(HttpServletRequest request) { // 根据歌曲id查询歌曲对象
+        String songId = request.getParameter("songId");
+        return songService.selectByPrimaryKey(Integer.parseInt(songId));
+    }
+
+    @RequestMapping(value = "/songOfSongName", method = RequestMethod.GET)
+    public Object songOfSongName(HttpServletRequest request) { // 根歌手id查询歌曲
+        String songName = request.getParameter("songName");
+        return songService.songOfName(songName);
+    }
 }
