@@ -1,4 +1,4 @@
-# MusicPlayer
+# MusicPlayer-RearEnd
 Music player based on SpringBoot and Vue
 
 ### 系统环境配置
