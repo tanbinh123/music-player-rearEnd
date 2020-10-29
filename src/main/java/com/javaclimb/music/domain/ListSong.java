@@ -8,7 +8,7 @@ public class ListSong implements Serializable {
 
     private Integer id;
 
-    private Integer singId; // 歌曲id
+    private Integer songId; // 歌曲id
 
     private Integer songListId; // 歌单id
 
@@ -20,12 +20,12 @@ public class ListSong implements Serializable {
         this.id = id;
     }
 
-    public Integer getSingId() {
-        return singId;
+    public Integer getSongId() {
+        return songId;
     }
 
-    public void setSingId(Integer singId) {
-        this.singId = singId;
+    public void setSongId(Integer songId) {
+        this.songId = songId;
     }
 
     public Integer getSongListId() {
