@@ -3,13 +3,20 @@ package com.javaclimb.music.domain;
 import java.io.Serializable;
 import java.util.Date;
 
-// 歌单
+/**
+ * 歌单
+ */
 public class SongList implements Serializable {
-    private Integer id; // 主键
-    private String title; // 标题
-    private String pic; // 图片
-    private String introduction; // 简介
-    private String style; // 风格
+    /*主键*/
+    private Integer id;
+    /*歌单标题*/
+    private String title;
+    /*歌单图片*/
+    private String pic;
+    /*简介*/
+    private String introduction;
+    /*风格*/
+    private String style;
 
     public Integer getId() {
         return id;

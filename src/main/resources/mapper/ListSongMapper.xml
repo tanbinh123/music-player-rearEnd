@@ -3,7 +3,7 @@
         "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.javaclimb.music.dao.ListSongMapper">
-    <resultMap id="BaseResultMap" type="com.javaclimb.music.domain.ListSong">
+    <resultMap id="BaseResultMap" type="com.javaclimb.music.domain.ListSong" >
         <id column="id" jdbcType="INTEGER" property="id"/>
         <result column="song_id" jdbcType="INTEGER" property="songId"/>
         <result column="song_list_id" jdbcType="INTEGER" property="songListId"/>
@@ -36,9 +36,9 @@
             <if test="songListId != null">
                 #{songListId},
             </if>
-        </trim>
+        </trim>        
     </insert>
-
+    
     <update id="update" parameterType="com.javaclimb.music.domain.ListSong">
         update list_song
         <set>
@@ -83,3 +83,19 @@
     </select>
 
 </mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

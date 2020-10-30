@@ -3,11 +3,9 @@
         "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.javaclimb.music.dao.SongListMapper">
-    <resultMap id="BaseResultMap" type="com.javaclimb.music.domain.SongList">
+    <resultMap id="BaseResultMap" type="com.javaclimb.music.domain.SongList" >
         <id column="id" jdbcType="INTEGER" property="id"/>
-
         <result column="title" jdbcType="VARCHAR" property="title"/>
-
         <result column="pic" jdbcType="VARCHAR" property="pic"/>
         <result column="style" jdbcType="VARCHAR" property="style"/>
     </resultMap>
@@ -23,6 +21,7 @@
     <sql id="Blob_Column_List">
         id,title,pic,style,introduction
     </sql>
+
     <insert id="insert" parameterType="com.javaclimb.music.domain.SongList">
         insert into song_list
         <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -42,8 +41,7 @@
                 style,
             </if>
         </trim>
-
-        <trim prefix="values (" suffix=")" suffixOverrides=",">
+        <trim prefix=" values (" suffix=")" suffixOverrides=",">
             <if test="id != null">
                 #{id},
             </if>
@@ -59,9 +57,9 @@
             <if test="style != null">
                 #{style},
             </if>
-        </trim>
+        </trim>        
     </insert>
-
+    
     <update id="update" parameterType="com.javaclimb.music.domain.SongList">
         update song_list
         <set>
@@ -83,7 +81,7 @@
 
     <delete id="delete" parameterType="java.lang.Integer">
         delete from song_list
-        where id = #{id}
+        where id=#{id}
     </delete>
 
     <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer">
@@ -105,6 +103,7 @@
         from song_list
         where title = #{title}
     </select>
+
     <select id="likeTitle" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String">
         select
         <include refid="Blob_Column_List"/>
@@ -112,11 +111,27 @@
         where title like #{title}
     </select>
 
-
     <select id="likeStyle" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String">
         select
         <include refid="Blob_Column_List"/>
         from song_list
         where style like #{style}
     </select>
+
 </mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

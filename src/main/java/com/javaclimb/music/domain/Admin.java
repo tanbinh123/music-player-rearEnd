@@ -2,11 +2,16 @@ package com.javaclimb.music.domain;
 
 import java.io.Serializable;
 
-// 管理员
+/**
+ * 管理员
+ */
 public class Admin implements Serializable {
-    private Integer id; // 主键
-    private String name; // 账号
-    private String password; // 密码
+    /*主键*/
+    private Integer id;
+    /*账号*/
+    private String name;
+    /*密码*/
+    private String password;
 
     public Integer getId() {
         return id;

@@ -4,21 +4,48 @@ import com.javaclimb.music.domain.SongList;
 
 import java.util.List;
 
-// 歌单service接口
+/**
+ * 歌单service接口
+ */
 public interface SongListService {
-    public boolean insert(SongList songList); // 增加
+    /**
+     *增加
+     */
+    public boolean insert(SongList songList);
 
-    public boolean update(SongList songList); // 修改
+    /**
+     *修改
+     */
+    public boolean update(SongList songList);
 
-    public boolean delete(Integer id); // 删除
+    /**
+     * 删除
+     */
+    public boolean delete(Integer id);
 
-    public SongList selectByPrimaryKey(Integer id); // 根据主键查询整个对象
+    /**
+     * 根据主键查询整个对象
+     */
+    public SongList selectByPrimaryKey(Integer id);
 
-    public List<SongList> allSongList(); // 查询所有歌手
+    /**
+     * 查询所有歌单
+     */
+    public List<SongList> allSongList();
 
-    public List<SongList> songListOfTitle(String title); // 根据歌手名字模糊查询列表
+    /**
+     * 根据标题精确查询歌单列表
+     */
+    public List<SongList> songListOfTitle(String title);
 
-    public List<SongList> likeTitle(String title); // 根据标题模糊查询歌单列表
+    /**
+     * 根据标题模糊查询歌单列表
+     */
+    public List<SongList> likeTitle(String title);
 
-    public List<SongList> likeStyle(String style); // 根据性别查询
+    /**
+     * 根据风格模糊查询歌单列表
+     */
+    public List<SongList> likeStyle(String style);
+
 }

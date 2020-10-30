@@ -5,20 +5,59 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-// 歌手Dao
+/**
+ * 歌手Dao
+ */
 @Repository
 public interface SingerMapper {
-    public int insert(Singer singer); // 增加
+    /**
+     *增加
+     */
+    public int insert(Singer singer);
 
-    public int update(Singer singer); // 修改
+    /**
+     *修改
+     */
+    public int update(Singer singer);
 
-    public int delete(Integer id); // 删除
+    /**
+     * 删除
+     */
+    public int delete(Integer id);
 
-    public Singer selectByPrimaryKey(Integer id); // 根据主键查询整个对象
+    /**
+     * 根据主键查询整个对象
+     */
+    public Singer selectByPrimaryKey(Integer id);
 
-    public List<Singer> allSinger(); // 查询所有歌手
+    /**
+     * 查询所有歌手
+     */
+    public List<Singer> allSinger();
 
-    public List<Singer> singerOfName(String name); // 根据歌手名字模糊查询列表
+    /**
+     * 根据歌手名字模糊查询列表
+     */
+    public List<Singer> singerOfName(String name);
 
-    public List<Singer> singerOfSex(Integer sex); // 根据性别查询
+    /**
+     * 根据性别查询
+     */
+    public List<Singer> singerOfSex(Integer sex);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

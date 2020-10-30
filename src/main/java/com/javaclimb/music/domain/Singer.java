@@ -3,15 +3,24 @@ package com.javaclimb.music.domain;
 import java.io.Serializable;
 import java.util.Date;
 
-// 歌手
+/**
+ * 歌手
+ */
 public class Singer implements Serializable {
-    private Integer id; // 主键
-    private String name; // 账号
-    private Byte sex; // 性别
-    private String pic; // 头像
-    private Date birth; // 生日
-    private String location; // 地区
-    private String introduction; // 简介
+    /*主键*/
+    private Integer id;
+    /*账号*/
+    private String name;
+    /*性别*/
+    private Byte sex;
+    /*头像*/
+    private String pic;
+    /*生日*/
+    private Date birth;
+    /*地区*/
+    private String location;
+    /*简介*/
+    private String introduction;
 
     public Integer getId() {
         return id;

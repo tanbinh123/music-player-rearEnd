@@ -4,19 +4,42 @@ import com.javaclimb.music.domain.Song;
 
 import java.util.List;
 
-// 歌曲service接口
+/**
+ * 歌曲service接口
+ */
 public interface SongService {
-    public boolean insert(Song song); // 增加
+    /**
+     *增加
+     */
+    public boolean insert(Song song);
 
-    public boolean update(Song song); // 修改
+    /**
+     *修改
+     */
+    public boolean update(Song song);
 
-    public boolean delete(Integer id); // 删除
+    /**
+     * 删除
+     */
+    public boolean delete(Integer id);
 
-    public Song selectByPrimaryKey(Integer id); // 根据主键查询整个对象
+    /**
+     * 根据主键查询整个对象
+     */
+    public Song selectByPrimaryKey(Integer id);
 
-    public List<Song> allSong(); // 查询所有歌曲
+    /**
+     * 查询所有歌曲
+     */
+    public List<Song> allSong();
 
-    public List<Song> songOfName(String name); // 根据歌曲名字模糊查询列表
+    /**
+     * 根据歌名精确查询列表
+     */
+    public List<Song> songOfName(String name);
 
-    public List<Song> songOfSingerId(Integer singerId); // 根据歌手id查询
+    /**
+     * 根据歌手id查询
+     */
+    public List<Song> songOfSingerId(Integer singerId);
 }

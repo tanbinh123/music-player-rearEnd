@@ -2,15 +2,16 @@ package com.javaclimb.music.domain;
 
 import java.io.Serializable;
 
-
-// 歌曲歌单
+/**
+ * 歌单里面的歌曲
+ */
 public class ListSong implements Serializable {
 
-    private Integer id;
+    private Integer id;     //主键
 
-    private Integer songId; // 歌曲id
+    private Integer songId; //歌曲id
 
-    private Integer songListId; // 歌单id
+    private Integer songListId; //歌单id
 
     public Integer getId() {
         return id;

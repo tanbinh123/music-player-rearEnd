@@ -5,21 +5,59 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-// 歌曲歌单Dao
+/**
+ * 歌单里面的歌曲Dao
+ */
 @Repository
 public interface ListSongMapper {
-    public int insert(ListSong listSong); // 增加
+    /**
+     *增加
+     */
+    public int insert(ListSong listSong);
 
-    public int update(ListSong listSong); // 修改
+    /**
+     *修改
+     */
+    public int update(ListSong listSong);
 
-    public int delete(Integer id); // 删除
+    /**
+     * 删除
+     */
+    public int delete(Integer id);
 
-    public int deleteBySongIdAndSongListId(Integer songId, Integer songListId); // 根据歌曲id和歌单id删除
+    /**
+     * 根据歌曲id和歌单id删除
+     */
+    public int deleteBySongIdAndSongListId(Integer songId,Integer songListId);
 
-    public ListSong selectByPrimaryKey(Integer id); // 根据主键查询整个对象
+    /**
+     * 根据主键查询整个对象
+     */
+    public ListSong selectByPrimaryKey(Integer id);
 
-    public List<ListSong> allListSong(); // 查询所有歌曲
+    /**
+     * 查询所有歌单里面的歌曲
+     */
+    public List<ListSong> allListSong();
 
-
-    public List<ListSong> listSongOfSongListId(Integer songListId); // 根据歌手id查询
+    /**
+     * 根据歌单id查询所有的歌曲
+     */
+    public List<ListSong> listSongOfSongListId(Integer songListId);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
