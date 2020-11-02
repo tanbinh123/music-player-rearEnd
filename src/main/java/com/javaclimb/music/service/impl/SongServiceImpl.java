@@ -15,6 +15,7 @@ import java.util.List;
 public class SongServiceImpl implements SongService {
     @Autowired
     private SongMapper songMapper;
+
     /**
      * 增加
      *
@@ -22,7 +23,7 @@ public class SongServiceImpl implements SongService {
      */
     @Override
     public boolean insert(Song song) {
-        return songMapper.insert(song)>0;
+        return songMapper.insert(song) > 0;
     }
 
     /**
@@ -32,7 +33,7 @@ public class SongServiceImpl implements SongService {
      */
     @Override
     public boolean update(Song song) {
-        return songMapper.update(song)>0;
+        return songMapper.update(song) > 0;
     }
 
     /**
@@ -42,7 +43,7 @@ public class SongServiceImpl implements SongService {
      */
     @Override
     public boolean delete(Integer id) {
-        return songMapper.delete(id)>0;
+        return songMapper.delete(id) > 0;
     }
 
     /**
@@ -71,6 +72,16 @@ public class SongServiceImpl implements SongService {
     @Override
     public List<Song> songOfName(String name) {
         return songMapper.songOfName(name);
+    }
+
+    /**
+     * 根据歌名模糊查询列表
+     *
+     * @param name
+     */
+    @Override
+    public List<Song> likeSongOfName(String name) {
+        return songMapper.songOfName("%" + name + "%");
     }
 
     /**

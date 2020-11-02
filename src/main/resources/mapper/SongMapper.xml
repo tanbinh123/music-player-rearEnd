@@ -3,7 +3,7 @@
         "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.javaclimb.music.dao.SongMapper">
-    <resultMap id="BaseResultMap" type="com.javaclimb.music.domain.Song" >
+    <resultMap id="BaseResultMap" type="com.javaclimb.music.domain.Song">
         <id column="id" jdbcType="INTEGER" property="id"/>
         <result column="singer_id" jdbcType="VARCHAR" property="singerId"/>
         <result column="name" jdbcType="VARCHAR" property="name"/>
@@ -75,9 +75,9 @@
             <if test="url != null">
                 #{url},
             </if>
-        </trim>        
+        </trim>
     </insert>
-    
+
     <update id="update" parameterType="com.javaclimb.music.domain.Song">
         update song
         <set>
@@ -128,6 +128,14 @@
         from song
         where name = #{name}
     </select>
+
+    <select id="likeSongOfName" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String">
+        select
+        <include refid="Blob_Column_List"/>
+        from song
+        where name like #{name}
+    </select>
+
 
     <select id="songOfSingerId" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer">
         select

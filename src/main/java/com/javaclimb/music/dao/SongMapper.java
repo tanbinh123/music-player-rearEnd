@@ -11,12 +11,12 @@ import java.util.List;
 @Repository
 public interface SongMapper {
     /**
-     *增加
+     * 增加
      */
     public int insert(Song song);
 
     /**
-     *修改
+     * 修改
      */
     public int update(Song song);
 
@@ -39,6 +39,11 @@ public interface SongMapper {
      * 根据歌名精确查询列表
      */
     public List<Song> songOfName(String name);
+
+    /**
+     * 根据歌名模糊查询列表
+     */
+    public List<Song> likeSongOfName(String name);
 
     /**
      * 根据歌手id查询
