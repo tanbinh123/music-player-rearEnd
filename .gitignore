@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### img/song ###
+img
+song

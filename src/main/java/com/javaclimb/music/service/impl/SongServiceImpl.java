@@ -81,7 +81,7 @@ public class SongServiceImpl implements SongService {
      */
     @Override
     public List<Song> likeSongOfName(String name) {
-        return songMapper.songOfName("%" + name + "%");
+        return songMapper.likeSongOfName("%" + name + "%");
     }
 
     /**

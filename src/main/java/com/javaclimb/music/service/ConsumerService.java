@@ -34,7 +34,7 @@ public interface ConsumerService {
     public List<Consumer> allConsumer();
 
     /**
-     * 修改密码
+     * 查看密码是否正确
      */
     public boolean verifyPassword(String username, String password);
 
