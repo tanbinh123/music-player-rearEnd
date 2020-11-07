@@ -132,7 +132,7 @@ public class SongListController {
     @RequestMapping(value = "/likeStyle",method = RequestMethod.GET)
     public Object likeStyle(HttpServletRequest request){
         String style = request.getParameter("style").trim();          //歌单风格
-        return songListService.likeTitle("%"+style+"%");
+        return songListService.likeStyle("%"+style+"%");
     }
 
     /**
