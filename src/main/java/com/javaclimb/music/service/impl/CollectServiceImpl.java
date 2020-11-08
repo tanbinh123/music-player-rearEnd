@@ -39,6 +39,17 @@ public class CollectServiceImpl implements CollectService {
     }
 
     /**
+     * 根据用户id和歌曲id删除
+     *
+     * @param userId
+     * @param songId
+     */
+    @Override
+    public boolean deleteByUserIdSongId(Integer userId, Integer songId) {
+        return collectMapper.deleteByUserIdSongId(userId, songId) > 0;
+    }
+
+    /**
      * 查询所有收藏
      */
     @Override

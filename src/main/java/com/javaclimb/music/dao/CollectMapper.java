@@ -22,6 +22,11 @@ public interface CollectMapper {
     public int delete(Integer id);
 
     /**
+     * 根据用户id和歌曲id删除
+     */
+    public int deleteByUserIdSongId(@Param("userId") Integer userId, @Param("songId") Integer songId);
+
+    /**
      * 查询所有收藏
      */
     public List<Collect> allCollect();

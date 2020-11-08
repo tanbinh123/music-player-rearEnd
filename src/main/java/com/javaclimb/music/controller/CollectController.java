@@ -63,8 +63,9 @@ public class CollectController {
      */
     @RequestMapping(value = "/delete", method = RequestMethod.GET)
     public Object deleteCollect(HttpServletRequest request) {
-        String id = request.getParameter("id").trim();          //主键
-        boolean flag = CollectService.delete(Integer.parseInt(id));
+        String userId = request.getParameter("userId");           //用户id
+        String songId = request.getParameter("songId");           //歌曲id
+        boolean flag = CollectService.deleteByUserIdSongId(Integer.parseInt(userId), Integer.parseInt(songId));
         return flag;
     }
 
@@ -81,7 +82,7 @@ public class CollectController {
      */
     @RequestMapping(value = "/collectOfUserId", method = RequestMethod.GET)
     public Object collectOfUserId(HttpServletRequest request) {
-        String userId = request.getParameter("userId");          //歌曲id
+        String userId = request.getParameter("userId");          //用户id
         return CollectService.collectOfUserId(Integer.parseInt(userId));
     }
 
